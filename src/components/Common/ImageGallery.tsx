@@ -10,7 +10,7 @@ function ImageGallery({ images }: ImageGalleryProps) {
           key={index}
           src={image}
           alt={`gallery-${index}`}
-          className="h-auto max-w-100 object-cover rounded"
+          className="max-h-70 max-w-100 object-cover rounded"
         />
       ))}
     </div>
