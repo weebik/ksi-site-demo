@@ -1,4 +1,6 @@
 import { useState } from "react";
+import LeftBtn from "../../assets/Left.svg";
+import RightBtn from "../../assets/Right.svg";
 
 const images = [
   "https://i1.sndcdn.com/artworks-Yiyr5xGCtveVtAwm-9FdyMQ-t1080x1080.jpg",
@@ -39,15 +41,23 @@ function ImageCarousel() {
 
       <button
         onClick={prevSlide}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        className="absolute left-0 top-1/2 transform -translate-y-1/2"
       >
-        Left
+        <img
+          src={LeftBtn}
+          alt="read more"
+          className="h-10 m-2 hover:bg-white rounded-full transition-colors duration-300"
+        />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 "
       >
-        Right
+        <img
+          src={RightBtn}
+          alt="read more"
+          className="h-10 m-2 hover:bg-white rounded-full transition-colors duration-300"
+        />
       </button>
     </div>
   );
