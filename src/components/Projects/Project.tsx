@@ -1,7 +1,8 @@
 import Section from "../Common/Section";
 
 interface ProjectProps {
-  variant: "start" | "normal" | "reverse";
+  id: number;
+  special?: "start" | "end";
   title: string;
   description: string;
   imageUrl: string;
@@ -9,54 +10,62 @@ interface ProjectProps {
 }
 
 function Project({
-  variant,
+  id,
+  special,
   title,
   description,
   imageUrl,
   link,
 }: ProjectProps) {
-  const sectionClasses = {
-    start: "bg-dark-section-primary z-10 pt-40 pb-50 relative",
-    normal: "bg-dark-section-primary z-10 -mt-30 pt-40 pb-50 relative",
-    reverse: "bg-dark-section-secondary z-20 -mt-30 pt-40 pb-50 relative",
-  };
+  const isEven = id % 2 === 0;
+  const sectionClass = special
+    ? special === "start"
+      ? "bg-dark-section-primary pb-50"
+      : "bg-dark-section-secondary -mt-30 pb-30"
+    : isEven
+    ? "bg-dark-section-secondary"
+    : "bg-dark-section-primary";
 
-  const clipPaths = {
-    start: "polygon(0 0, 100% 10%, 100% 100%, 0 100%)",
-    normal: "polygon(0 10%, 100% 0, 100% 90%, 0 100%)",
-    reverse: "polygon(0 10%, 100% 0, 100% 100%, 0 90%)",
-  };
+  const clipPath = special
+    ? special === "start"
+      ? "polygon(0 0, 100% 10%, 100% 100%, 0 100%)"
+      : "polygon(0 0%, 100% 10%, 100% 100%, 0 100%)"
+    : isEven
+    ? "polygon(0 0%, 100% 10%, 100% 90%, 0 100%)"
+    : "polygon(0 10%, 100% 0, 100% 100%, 0 90%)";
 
   return (
     <section
-      className={sectionClasses[variant]}
-      style={{
-        clipPath: clipPaths[variant],
-      }}
+      className={`${sectionClass} z-10 ${
+        special ? "pt-40" : "-mt-30 pt-40 pb-50"
+      } relative`}
+      style={{ clipPath }}
     >
-      {variant === "reverse" ? (
-        <div className="container flex flex-row gap-20 mx-auto max-w-350 items-center">
-          <Section header={title} subheader={description} link={link} />
-          <div className="flex flex-col items-center justify-center">
-            <img
-              src={imageUrl}
-              alt="project"
-              className="w-auto h-auto max-h-100 object-cover"
-            />
-          </div>
-        </div>
-      ) : (
-        <div className="container flex flex-row gap-20 mx-auto max-w-350 items-center">
-          <div className="flex flex-col items-center justify-center">
-            <img
-              src={imageUrl}
-              alt="project"
-              className="w-auto h-auto max-h-100 object-cover"
-            />
-          </div>
-          <Section header={title} subheader={description} link={link} />
-        </div>
-      )}
+      <div className="container flex flex-row gap-20 mx-auto max-w-350 items-center">
+        {isEven ? (
+          <>
+            <Section header={title} subheader={description} link={link} />
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src={imageUrl}
+                alt={title}
+                className="w-auto h-auto max-h-100 object-cover"
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src={imageUrl}
+                alt={title}
+                className="w-auto h-auto max-h-100 object-cover"
+              />
+            </div>
+            <Section header={title} subheader={description} link={link} />
+          </>
+        )}
+      </div>
     </section>
   );
 }

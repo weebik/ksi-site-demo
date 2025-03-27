@@ -10,6 +10,10 @@ const videos = [
     title: "The Diary of Jane - Breaking Benjamin",
     id: "DWaB4PXCwFU?si=zCQXP6KGWONYih4h",
   },
+  {
+    title: "I hate everything about you - Three Days Grace",
+    id: "d8ekz_CSBVg?si=J9J9Z9Q9Q9q9Q9Q9",
+  },
 ];
 
 function ZosiaPlayer() {

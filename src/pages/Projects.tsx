@@ -10,34 +10,35 @@ function Projects() {
       <HeroSection header="Projekty" subheader="Czyli to czym się zajmujemy" />
       <BackgroundImage imageUrl="https://wsei.edu.pl/wp-content/uploads/2024/06/jak-zostac-project-managerem-w-it-5-wskazowek-dla-poczatkujacych-1-min.jpg" />
       <Project
-        variant="start"
+        id={1}
+        special="start"
         title="Zosia"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non finibus turpis, non fringilla lectus. Donec quis eleifend diam. Nullam tempus dui felis, non facilisis ligula pretium a."
         imageUrl="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
         link="/zosia"
       />
       <Project
-        variant="reverse"
+        id={2}
         title="Hour of Code"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non finibus turpis, non fringilla lectus. Donec quis eleifend diam. Nullam tempus dui felis, non facilisis ligula pretium a."
         imageUrl="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
         link="/hoc"
       />
       <Project
-        variant="normal"
+        id={3}
         title="Ksiciuś"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non finibus turpis, non fringilla lectus. Donec quis eleifend diam. Nullam tempus dui felis, non facilisis ligula pretium a."
         imageUrl="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
         link="/"
       />
       <Project
-        variant="reverse"
+        id={4}
+        special="end"
         title="Pokój studencki"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non finibus turpis, non fringilla lectus. Donec quis eleifend diam. Nullam tempus dui felis, non facilisis ligula pretium a."
         imageUrl="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
         link="/"
       />
-      <div className="h-30 bg-dark-section-primary -mt-30" />
     </div>
   );
 }
