@@ -4,13 +4,13 @@ interface ImageGalleryProps {
 
 function ImageGallery({ images }: ImageGalleryProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="flex flex-row flex-wrap justify-center gap-10">
       {images.map((image, index) => (
         <img
           key={index}
           src={image}
           alt={`gallery-${index}`}
-          className="rounded-lg"
+          className="h-auto max-w-100 object-cover rounded"
         />
       ))}
     </div>

@@ -1,4 +1,4 @@
-import Section from "../Common/Section";
+import TitleSection from "../Common/TitleSection";
 
 function AssociationBoard() {
   return (
@@ -7,7 +7,7 @@ function AssociationBoard() {
       style={{ clipPath: "polygon(0 5%, 100% 0, 100% 100%, 0 100%)" }}
     >
       <div className="container flex flex-col gap-20 mx-auto max-w-350 items-center">
-        <Section header="Zarząd koła" />
+        <TitleSection header="Zarząd koła" />
 
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-10">
           <div className="flex flex-row items-center text-right gap-10 mt-[3vw]">

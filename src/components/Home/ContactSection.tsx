@@ -1,4 +1,4 @@
-import Section from "../Common/Section";
+import TitleSection from "../Common/TitleSection";
 
 function ContactSection() {
   return (
@@ -7,7 +7,7 @@ function ContactSection() {
       style={{ clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 90%)" }}
     >
       <div className="container flex flex-row gap-20 mx-auto max-w-350 items-center">
-        <Section
+        <TitleSection
           header="Skontaktuj się"
           subheader="Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
           link="/contact"

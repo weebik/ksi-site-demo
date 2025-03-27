@@ -1,5 +1,5 @@
 import ImageCarousel from "../Common/ImageCarousel";
-import Section from "../Common/Section";
+import TitleSection from "../Common/TitleSection";
 
 function ZosiaAbout() {
   return (
@@ -8,7 +8,7 @@ function ZosiaAbout() {
       style={{ clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 90%)" }}
     >
       <div className="container flex flex-row gap-20 mx-auto max-w-350 items-center">
-        <Section
+        <TitleSection
           header="Czym jest ZOSIa?"
           subheader="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
           amet ornare mauris. Curabitur quis neque viverra, ultrices lorem vel,

@@ -1,8 +1,10 @@
+import GallerySection from "../components/Common/GallerySection";
 import BackgroundImage from "../components/Common/KsiBackgroundImage";
 import ZosiaAbout from "../components/ZOSIa/ZosiaAbout";
 import ZosiaHeroSection from "../components/ZOSIa/ZosiaHeroSection";
 import ZosiaLectures from "../components/ZOSIa/ZosiaLectures";
 import useDocumentTitle from "../hooks/useDocumentTitle";
+import images from "../TEMPORARY_DATA/images";
 
 function ZOSIa() {
   useDocumentTitle("KSI | " + "ZOSIA");
@@ -12,7 +14,7 @@ function ZOSIa() {
       <ZosiaHeroSection />
       <ZosiaAbout />
       <ZosiaLectures />
-      {/* <ZosiaGallery /> */}
+      <GallerySection images={images.map((image) => image.src)} />
     </div>
   );
 }

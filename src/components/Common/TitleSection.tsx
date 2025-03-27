@@ -1,7 +1,7 @@
 import ReadMore from "./ReadMore";
 import SectionProps from "../../types/section.type";
 
-function Section({ header, subheader, link }: SectionProps) {
+function TitleSection({ header, subheader, link }: SectionProps) {
   return (
     <div className="text-center min-h-auto w-full">
       <div className="w-full">
@@ -19,4 +19,4 @@ function Section({ header, subheader, link }: SectionProps) {
     </div>
   );
 }
-export default Section;
+export default TitleSection;

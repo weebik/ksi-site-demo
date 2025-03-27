@@ -1,4 +1,4 @@
-import Section from "../Common/Section";
+import TitleSection from "../Common/TitleSection";
 
 interface ProjectProps {
   id: number;
@@ -44,7 +44,7 @@ function Project({
       <div className="container flex flex-row gap-20 mx-auto max-w-350 items-center">
         {isEven ? (
           <>
-            <Section header={title} subheader={description} link={link} />
+            <TitleSection header={title} subheader={description} link={link} />
             <div className="flex flex-col items-center justify-center">
               <img
                 src={imageUrl}
@@ -62,7 +62,7 @@ function Project({
                 className="w-auto h-auto max-h-100 object-cover"
               />
             </div>
-            <Section header={title} subheader={description} link={link} />
+            <TitleSection header={title} subheader={description} link={link} />
           </>
         )}
       </div>

@@ -1,4 +1,4 @@
-import Section from "../Common/Section";
+import TitleSection from "../Common/TitleSection.tsx";
 import MemberCard from "./MemberCard";
 import members from "../../TEMPORARY_DATA/members.ts";
 
@@ -10,7 +10,7 @@ function RegularMembers() {
     >
       {/* note: adjust the clipPath value to fit the design */}
       <div className="container flex flex-col gap-20 mx-auto max-w-350 items-center">
-        <Section header="Pozostali członkowie" />
+        <TitleSection header="Pozostali członkowie" />
         <div className="grid grid-cols-4 gap-10">
           {members.map((member) => (
             <MemberCard key={member.name} member={member} />

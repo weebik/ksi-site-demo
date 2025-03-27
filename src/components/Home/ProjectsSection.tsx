@@ -1,4 +1,4 @@
-import Section from "../Common/Section";
+import TitleSection from "../Common/TitleSection";
 
 function ProjectsSection() {
   return (
@@ -12,7 +12,7 @@ function ProjectsSection() {
           alt="Członkowie"
           className="w-1/3 max-h-96 object-cover"
         />
-        <Section
+        <TitleSection
           header="Projekty"
           subheader="Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
           link="/projects"

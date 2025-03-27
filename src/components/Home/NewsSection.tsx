@@ -1,4 +1,4 @@
-import Section from "../Common/Section";
+import TitleSection from "../Common/TitleSection";
 import NewsCard from "./NewsCard";
 
 function NewsSection() {
@@ -27,7 +27,7 @@ function NewsSection() {
   return (
     <section className="bg-transparent z-10 pt-40 pb-50 relative -mt-30 items-center justify-center">
       <div className="container flex flex-col gap-20 mx-auto max-w-350 items-center">
-        <Section
+        <TitleSection
           header="Najnowsze nowinki"
           subheader="Zobacz co się dzieje wokół nas."
         />
