@@ -10,7 +10,8 @@ function ImageGallery({ images }: ImageGalleryProps) {
           key={index}
           src={image}
           alt={`gallery-${index}`}
-          className="max-h-70 max-w-100 object-cover rounded"
+          className="max-h-70 max-w-100 object-cover rounded
+          hover:scale-105 transition-transform duration-300"
         />
       ))}
     </div>
